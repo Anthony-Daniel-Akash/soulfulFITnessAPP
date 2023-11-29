@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-qt+i4(-@e3^y+k63vms2a+nku=gp6tiv)z(v+6zq2jks7*1my4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['fitnesswebappmagicbus.azurewebsites.net', 'www.fitnesswebappmagicbus.azurewebsites.net','127.0.0.1','127.0.0.1:8000']
+ALLOWED_HOSTS = ['soulfit.azurewebsites.net','www.soulfit.azurewebsites.net','127.0.0.1','127.0.0.1:8000']
 
 
 
@@ -77,10 +77,13 @@ WSGI_APPLICATION = 'soulfitpro.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-       'NAME': BASE_DIR / 'db.sqlite3',
-       
-   }
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': '<your_database_name>',
+        'USER': '<your_username>',
+        'PASSWORD': '<your_password>',
+        'HOST': '<your_server_address>',
+        'PORT': '<your_port_number>',  # Use the default PostgreSQL port (5432) unless you specified a different one.
+    }
 }
 #DATABASES = {
     #'default': {
