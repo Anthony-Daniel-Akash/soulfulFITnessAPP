@@ -13,8 +13,166 @@
             Details for Cash On Delivery
         </title>
 
-        <link rel="stylesheet" href="{% static 'cheackout.css' %}">
-        <script src="{% static 'cheackout.js' %}" defer></script>
+     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    width:100%;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    background: linear-gradient(100deg, black ,silver) ;
+}
+
+.contact-in{
+    width: 70%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0px 0px 0px 0px;
+
+}
+
+
+
+
+.contact-form{
+    
+    width: 30%;
+    size-adjust: 60%;
+    height: auto;
+    flex: 50%;
+    padding:30px;
+    text-align: center;
+}
+
+.contact-form h1{
+    margin-bottom: 10px;
+}
+
+.contact-form-txt{
+    
+    width: 100%;
+    height: 40px;
+    color: #000;
+    border: 1px solid #bcbcbc;
+    border-radius: 50px;
+    outline: none;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.time_slot {
+    width: 100%;
+    height: 40px;
+    color: #000;
+    border: 1px solid #bcbcbc;
+    border-radius: 50px;
+    outline: none;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.contact-form-txt::placeholder{
+    color:#aaa;
+}
+
+.time_slot::placeholder {
+    color:#aaa;
+}
+
+.contact-form-textarea{
+    width: 100%;
+    height: 130px;
+    color: #000;
+    border: 1px solid #bcbcbc;
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.contact-form-textarea::placeholder{
+    color:#aaa;
+}
+
+.contact-form-btn{
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background: linear-gradient(120deg,#082a41,#a313e0);
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px 0;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.address_form {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#error_message{
+    margin-bottom: 20px;
+    background: #fe8b8e;
+    padding: 0px;
+    text-align: center;
+    font-size: 14px;
+    transition: all 0.5s ease;
+}
+     </style>
+        <script>function validate_form(){
+            var name=document.getElementById("name").value;
+            var phone=document.getElementById("phone").value;
+            var email=document.getElementById("email").value;
+            var pincode=document.getElementById("pincode").value;
+            var error_message=document.getElementById("error_message");
+        
+            error_message.style.padding="10px";
+        
+            var text;
+            if(name.length<3){
+                text="Please Enter a valid Name";
+                error_message.innerHTML = text;
+                return false;
+            }
+            if(isNaN(phone) || phone.length !=10){
+                text="Please Enter a valid Phone Number";
+                error_message.innerHTML=text;
+                return false;
+            }
+            if(isNaN(pincode) || pincode.length !=6){
+                text="Please enter a valid Pincode";
+                error_message.innerHTML=text;
+                return false;
+            }
+            if(email.indexof("@") == -1 || email.length < 6){
+                text="Please enter a valid E-mail ID.";
+                error_message.innerHTML=text;
+                return false;
+            }
+        }
+        
+            document.addEventListener('DOMContentLoaded', function () {
+        
+                    const submitBtn = document.getElementById('submit');
+                    submitBtn.addEventListener('click', function () {
+                        alert('your order is placed!');
+                        window.history.back();
+                    });
+        })s </script>
     </head>
     <body>
         <div class="contact-in">
