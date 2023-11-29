@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-qt+i4(-@e3^y+k63vms2a+nku=gp6tiv)z(v+6zq2jks7*1my4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['soulfit.azurewebsites.net','www.soulfit.azurewebsites.net','127.0.0.1','127.0.0.1:8000']
+ALLOWED_HOSTS = ['soulfit.azurewebsites.net','www.soulfit.azurewebsites.net','127.0.0.1','soulfit.azurewebsites.net']
 
 
 
