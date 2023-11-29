@@ -79,12 +79,9 @@ WSGI_APPLICATION = 'soulfitpro.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': '<your_database_name>',
-        'USER': '<your_username>',
-        'PASSWORD': '<your_password>',
-        'HOST': '<your_server_address>',
-        'PORT': '<your_port_number>',  # Use the default PostgreSQL port (5432) unless you specified a different one.
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+       
     }
 }
 #DATABASES = {
@@ -139,7 +136,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'fitapp\static'
+STATIC_URL = '\fitapp\static'
+
+# settings.py
+
+# ... other settings ...
+
+STATIC_ROOT = '\fitapp\static'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
